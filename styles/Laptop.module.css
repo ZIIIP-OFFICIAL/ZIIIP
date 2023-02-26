@@ -1,0 +1,57 @@
+.laptopCard {
+	display: grid;
+	width: 20rem;
+	height: auto;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.laptopCardImg {
+	width: 100%;
+	height: auto;
+}
+
+.laptopInfo {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	background-color: #fff;
+	padding: 1rem;
+}
+
+.brandModel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.brandModel h3 {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.brandModel p {
+	font-size: 14px;
+	color: #333;
+}
+
+.laptopInfo p {
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.laptopInfo h2 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+}
+
+.infoButton {
+	border: none;
+	background-color: #333;
+	color: #ccc;
+	height: 2.5rem;
+	cursor: pointer;
+}
