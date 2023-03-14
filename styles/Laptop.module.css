@@ -1,4 +1,5 @@
 .laptopCard {
+	/* position: relative; */
 	display: grid;
 	width: 20rem;
 	height: auto;
@@ -54,4 +55,9 @@
 	color: #ccc;
 	height: 2.5rem;
 	cursor: pointer;
+	/* position: absolute;
+	width: 100%;
+	bottom: 0px; */
+	align-self: self-end;
 }
+
