@@ -162,7 +162,7 @@ export default function Home({ data }: { data: any }) {
   );
 }
 
-export async function getServerSideProps(context: any) {
+export async function getStaticProps(context: any) {
   const res = await fetch("http://localhost:3000/api/laptops");
   const data = await res.json();
   // console.log(data)
