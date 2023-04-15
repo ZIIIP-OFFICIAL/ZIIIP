@@ -23,5 +23,6 @@
 //   return emailBodyParsed.toString();
 // };
 
+const wee = 335;
 // export { GetEmailSubject, GetEmailBody };
-export {`wee`};
+export { wee };
