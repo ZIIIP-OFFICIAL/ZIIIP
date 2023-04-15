@@ -132,7 +132,7 @@ export default function Home() {
                   </button>
                 </form> */}
                 <p style={{ fontSize: "1.5rem" }}>
-                  Please Contact at <strong>9862513949</strong> to order.<br/>Or contact at ziiiip.official@gmail.com.
+                  Please Contact at <strong>9862513949</strong> to order.<br/>Or contact at <strong>ziiiip.official@gmail.com</strong>.
                 </p>
               </div>
             </div>
