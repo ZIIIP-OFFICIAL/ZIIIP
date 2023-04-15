@@ -146,7 +146,7 @@ export default function Home() {
               setOpen={setOpen}></LaptopCard>
           ))}
 
-          <ScrollToTop
+          {/* <ScrollToTop
             styles={{
               width: "calc(100% + 4rem)",
               textAlign: "center",
@@ -157,7 +157,7 @@ export default function Home() {
               marginLeft: "-2rem",
               marginBottom: "-1rem",
             }}
-          />
+          /> */}
         </section>
       </section>
     </>
