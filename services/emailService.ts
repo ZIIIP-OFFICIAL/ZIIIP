@@ -1,6 +1,6 @@
 import sendgrid from "@sendgrid/mail";
 
-sendgrid.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
+// sendgrid.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY as string);
 
 interface IEmailParams {
   subject: string;

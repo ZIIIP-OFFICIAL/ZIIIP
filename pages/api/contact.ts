@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { sendEmail } from "../../services/emailService";
-import {
-  GetEmailBody,
-  GetEmailSubject,
-} from "../../services/emailTemplateService";
+// import {
+//   GetEmailBody,
+//   GetEmailSubject,
+// } from "../../services/emailTemplateService";
 
 export default async function handler(
   req: NextApiRequest,
@@ -16,7 +16,7 @@ export default async function handler(
     const { name, model, contactNo } = req.body;
 
     //send email to admin
-    const emailSubject = await GetEmailSubject("contact/contact_subject.txt");
+    // const emailSubject = await GetEmailSubject("contact/contact_subject.txt");
 
     const data = {
       name: name,
@@ -24,16 +24,16 @@ export default async function handler(
       contactNo: contactNo,
     };
 
-    const emailBody = await GetEmailBody("contact/contact_body.txt", data);
+    // const emailBody = await GetEmailBody("contact/contact_body.txt", data);
 
-    const emailParam = {
-      to: "lsuyogya@gmail.com",
-      from: process.env.ADMIN_EMAIL as string,
-      subject: emailSubject,
-      text: emailBody,
-    };
+    // const emailParam = {
+    //   to: "lsuyogya@gmail.com",
+    //   // from: process.env.ADMIN_EMAIL as string,
+    //   subject: emailSubject,
+    //   text: emailBody,
+    // };
 
-    sendEmail(emailParam);
+    // sendEmail(emailParam);
 
     return res.status(200).json({ message: "Order Email Sent Successfully" });
   } catch (err) {
