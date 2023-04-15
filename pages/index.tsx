@@ -7,6 +7,7 @@ import { Modal } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import axios from "axios";
 import { fontSize } from "@mui/system";
+
 // import { useRef } from 'react';
 interface Laptop {
   image: string;
@@ -23,9 +24,10 @@ interface Laptop {
   name: string;
 }
 
-export default function Home({ data }: { data: any }) {
+export default function Home() {
   // const scrollRef = useRef(null);
   // useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
+  const data = require("@/pages/api/laptops/laptop.json");
   const laptops: Laptop[] = data;
   const [open, setOpen] = useState(false);
   const contactRef = useRef<HTMLInputElement>(null);
@@ -162,14 +164,14 @@ export default function Home({ data }: { data: any }) {
   );
 }
 
-export async function getStaticProps(context: any) {
-  const res = await fetch("http://localhost:3000/api/laptops");
-  const data = await res.json();
-  // console.log(data)
-  // const data = "weeeeeeeeee"
-  return {
-    props: {
-      data,
-    }, // will be passed to the page component as props
-  };
-}
+// export async function getStaticProps(context: any) {
+//   const res = await fetch("http://localhost:3000/api/laptops");
+//   const data = await res.json();
+//   // console.log(data)
+//   // const data = "weeeeeeeeee"
+//   return {
+//     props: {
+//       data,
+//     }, // will be passed to the page component as props
+//   };
+// }
