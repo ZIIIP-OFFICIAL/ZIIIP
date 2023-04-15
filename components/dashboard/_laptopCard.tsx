@@ -81,7 +81,7 @@ const LaptopCard: React.FC<Props> = ({ laptop, setLaptopModel, setOpen }) => {
           <br /> {laptop.processor}
         </p>
         <p>
-          <b>Price</b> <br /> <span style={{color:"	#A9A9A9", textDecoration:"red"}}><s>{laptop.strikePrice}</s> </span> Rs {laptop.price} Rs
+          <b>Price</b> <br /> <span style={{color:"	#A9A9A9", textDecoration:"red"}}><s>Rs {laptop.strikePrice}</s> </span> Rs {laptop.price}
         </p>
       </div>
       <button
