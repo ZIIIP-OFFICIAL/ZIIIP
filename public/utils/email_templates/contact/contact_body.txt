@@ -1,0 +1,7 @@
+
+Thank you for contacting us!
+
+We have received your contact with following details:
+Name: ${name}
+Model: ${model}
+ContactNo: ${contactNo}
