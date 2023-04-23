@@ -77,10 +77,6 @@ const LaptopCard: React.FC<Props> = ({ laptop, setLaptopModel, setOpen }) => {
           <br /> {laptop.model}
         </p>
         <p>
-          <b>Processor</b>
-          <br /> {laptop.processor}
-        </p>
-        <p>
           <b>Price</b> <br /> <span style={{color:"	#A9A9A9", textDecoration:"red"}}><s>Rs {laptop.strikePrice}</s> </span> Rs {laptop.price}
         </p>
       </div>
