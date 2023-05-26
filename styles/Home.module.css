@@ -30,7 +30,6 @@
 }
 
 .snapChild {
-	scroll-snap-align: start;
 	min-height: 100vh;
 	padding: 1rem 2rem;
 	display: grid;
@@ -38,6 +37,10 @@
 	/* grid-auto-columns: minmax(0, 1fr); */
 	gap: 2rem;
 	justify-items: center;
+}
+
+.snapChildSnap {
+	scroll-snap-align: start;
 }
 
 @media only screen and (max-width: 1370px) {

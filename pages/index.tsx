@@ -49,9 +49,10 @@ export default function Home() {
 		handleClose();
 	}
 	function handleScrollDown() {
+		console.log('triggered');
 		const element = document.getElementById('contentPageAnchor');
 		if (element) {
-			element.scrollIntoView();
+			element.scrollIntoView({ behavior: 'smooth' });
 		}
 	}
 	return (
@@ -64,7 +65,7 @@ export default function Home() {
 			</Head>
 
 			<section className={styles.bigContainer}>
-				<section className={styles.wrapper}>
+				<section className={styles.wrapper} onWheel={handleScrollDown}>
 					<div className={styles.top}>ZIIIP</div>
 					<div className={styles.bottom} aria-hidden='true'>
 						ZIIIP
