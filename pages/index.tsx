@@ -7,6 +7,7 @@ import { Modal } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import axios from 'axios';
 import { fontSize } from '@mui/system';
+import EarpodCard from '@/components/dashboard/_earpodCard';
 
 // import { useRef } from 'react';
 interface Laptop {
@@ -23,12 +24,22 @@ interface Laptop {
 	display: string;
 	name: string;
 }
+interface Earpod {
+	brand: string;
+	image: string;
+	model: string;
+	price: number;
+	strikePrice: number;
+	name: string;
+}
 
 export default function Home() {
 	// const scrollRef = useRef(null);
 	// useScrollSnap({ ref: scrollRef, duration: 100, delay: 50 });
 	const data = require('@/pages/api/laptops/laptop.json');
 	const laptops: Laptop[] = data;
+	const data2 = require('@/pages/api/laptops/earpod.json');
+	const earpods: Earpod[] = data2;
 	const [open, setOpen] = useState(false);
 	const contactRef = useRef<HTMLInputElement>(null);
 	const nameRef = useRef<HTMLInputElement>(null);
@@ -139,12 +150,19 @@ export default function Home() {
 						</div>
 					</Modal>
 
-					{laptops.map((laptop, index) => (
+					{laptops.map((laptop) => (
 						<LaptopCard
 							laptop={laptop}
-							key={index}
+							key={laptop.model}
 							setLaptopModel={setLaptopModel}
 							setOpen={setOpen}></LaptopCard>
+					))}
+					{earpods.map((earpod) => (
+						<EarpodCard
+							earpod={earpod}
+							key={earpod.model}
+							setLaptopModel={setLaptopModel}
+							setOpen={setOpen}></EarpodCard>
 					))}
 
 					{/* <ScrollToTop
